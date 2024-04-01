@@ -85,3 +85,114 @@ for (let i=1; i <= 20; i++) {
         console.log(`${i} --> ${i}`)
     }
 }
+
+/*Print out every character from the string:
+"Frontend Simplified"
+
+@example
+'F'
+'r'
+'o'
+...
+'e'
+'d'
+*/
+
+const str = "Frontend Simplified"
+
+for (let i = 0; i < str.length; i++) {
+    console.log(str[i])
+}
+
+
+/* function with fahrenheit / celsius
+/*
+
+/*Converting Temperatures
+
+Celsius-to-Fahrenheit formula:
+
+F = C x 1.8 +32
+*/
+
+// function convertCelsiusToFahrenheit (cels) {
+//     return cels * 1.8 + 32
+// }
+
+// Arrow Function
+const convertCelsiusToFahrenheit = (cels) => {
+    return cels * 1.8 + 32
+}
+
+console.log(convertCelsiusToFahrenheit(0))
+console.log(convertCelsiusToFahrenheit(10))
+console.log(convertCelsiusToFahrenheit(30))
+
+/*convert to celsius to fahrenheit*/
+/*print out results*/
+
+
+/* Filter out all the 'FAIL' elements in an array
+
+@examples
+['A+', 'A', 'FAIL'] => [A+', 'A']
+['FAIL', 'FAIL', 'B'] => ['B']
+['FAIL'] => []
+*/
+let grades = ['A+', 'A', 'FAIL']
+
+// let goodGrades = grades.filter((element) => {
+//     if (element !== 'FAIL') {
+//         return true;
+//     }
+// })
+
+let goodGrades = grades.filter(element => element !== 'FAIL')
+
+console.log(goodGrades)
+
+
+/* Filter out all the 'FAIL' elements in an array
+without using the Array.filter method
+
+@examples
+['A+', 'A', 'FAIL'] => [A+', 'A']
+['FAIL', 'FAIL', 'B'] => ['B']
+['FAIL'] => []
+*/
+let grades2 = ['A+', 'A', 'FAIL']
+
+let goodGrades2 = []
+
+for (let i=0; i < grades2.length; i++) {
+    if (grades2[i] !== 'FAIL') {
+        goodGrades2.push(grades2[i]);
+    }
+}
+
+console.log(goodGrades2)
+
+/* Turn each element in an array of dollars into cents
+
+@examples
+[1, 5, 10, 3] => [100, 500, 1000, 300]
+[0, 10, 20] => [0,1000, 2000]
+*/
+
+let dollars = [1, 5, 10, 3];
+
+// let cents = dollars.map(element => element * 100) short method
+
+// let cents = dollars.map(element => {
+//     return element * 100
+// }) long way
+
+// without using map method, brute force method
+
+let cents = []
+
+for (let i =0; i < dollars.length; i++) {
+    cents.push(dollars[i] * 100)
+}
+
+console.log(cents)
