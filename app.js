@@ -196,3 +196,102 @@ for (let i =0; i < dollars.length; i++) {
 }
 
 console.log(cents)
+
+
+let users = [
+    {
+    username: 'David',
+    email: 'david@frontendsimplified.com',
+    password: 'test123',
+    subscriptionStatus: 'VIP',
+    discordId: 'DavidBragg#001',
+    lessonsCompleted: [0, 1, 2, 3, 4],
+    },
+    {
+    username: 'Mitri',
+    email: 'mitri@frontendsimplified.com',
+    password: 'test123',
+    subscriptionStatus: 'VIP',
+    discordId: 'Demetri#001',
+    lessonsCompleted: [0, 1, 2, 3, 4],
+}
+]
+/**
+Create a register function that accepts:
+-username
+-email
+-password
+-subscriptionsStatus
+-discordId
+-lessonsCompleted
+
+Inside your register function:
+1. Create a user object
+2. push this user object onto the 'users' array
+*/
+
+
+function register(user) {
+    // name,
+    // email,
+    // password,
+    // subscriptionsStatus,
+    // discordId,
+    // lessonsCompleted
+    
+    // let user = {
+    //     username: name,
+    //     email: email,
+    //     password: password,
+    //     subscriptionStatus: subscriptionsStatus,
+    //     discordId: discordId,
+    //     lessonsCompleted: lessonsCompleted
+    // }
+    users.push(user)
+}
+    // CLEANER CODE INSTEAD ALL OF THAT CODE BEFORE
+
+// BECAUSE WE ARE PASSING IN AN OBJECT INTO THE FUNCTION NEED TO CHANGE THE PARAMETERS TO JUST ONE - USER
+
+// register (
+//     'Zen', 
+//     'zen@frontendsimplified.com', 
+//     'zen123', 
+//     'VIP', 
+//     'Zen#001', 
+//     '[0, 1]'
+// ) NOT READABLE CODE BELOW IS BETTER PRACTICE
+
+register ({
+    username: 'Zen',
+    email: 'zen@frontendsimplified.com',
+    password: 'zen123',
+    subscriptionStatus: 'VIP',
+    discordId: 'Zen#001',
+    lessonsCompleted: [0, 1]
+})
+
+console.log(users)
+
+
+// First way of accessing an element
+console.log(document.querySelector('#title'))
+
+//with a class selector over an ID
+// console.log(document.querySelector('.title'))
+
+// select element
+// console.log(document.querySelector('h1'))
+
+// Second way of accessing an element
+// This only works if element has an ID
+console.log(document.getElementById('title'));
+
+console.log (document.querySelector('#title').innerHTML += ' Frontend Simplified');
+
+//Change CSS
+document.querySelector("#title").style.fontSize = '16px';
+
+function toggleDarkMode () {
+    document.querySelector("body").classList.toggle("dark-theme")
+}
